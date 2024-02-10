@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PaperRockScissors_MauiGame.Views.GameView"
+             xmlns:viewModel="clr-namespace:PaperRockScissors_MauiGame.ViewModels"
+             x:DataType="viewModel:GameViewModel">
+
+    <VerticalStackLayout>
+        <Label Text="Paper, rock and scissors" FontSize="25" HorizontalTextAlignment="Center" />
+        <Label Text="What do you choose" FontSize="20" HorizontalTextAlignment="Center" />
+        <Button Text="Paper" FontSize="16" Command="{Binding ChooseCommand}" CommandParameter="Paper" />
+        <Button Text="Rock" FontSize="16" Command="{Binding ChooseCommand}" CommandParameter="Rock" />
+        <Button Text="Scissors" FontSize="16" Command="{Binding ChooseCommand}" CommandParameter="Scissors" />
+        <Button Text="Cancel" FontSize="16" Command="{Binding CancelCommand}" />
+    </VerticalStackLayout>
+</ContentPage>
