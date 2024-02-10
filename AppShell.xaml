@@ -7,8 +7,13 @@
     Shell.FlyoutBehavior="Disabled"
     Title="PaperRockScissors_MauiGame">
 
-    <ShellContent
-        ContentTemplate="{DataTemplate views:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="Game">
+            <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
+        </Tab>
+        <Tab Title="Rules">
+            <ShellContent ContentTemplate="{DataTemplate views:RulesView}" />
+        </Tab>
+    </TabBar>
 
 </Shell>
