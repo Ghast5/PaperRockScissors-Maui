@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PaperRockScissors_MauiGame.Views.ResultView"
+             xmlns:viewModel="clr-namespace:PaperRockScissors_MauiGame.ViewModels"
+             x:DataType="viewModel:ResultViewModel">
+
+    <VerticalStackLayout Margin="20">
+        <Label Text="Your score" FontSize="25" HorizontalTextAlignment="Center" />
+        <Label Text="{Binding Score}" />
+        <Button Text="Play again" FontSize="16" Command="{Binding PlayAgainCommand}" />
+        <Button Text="Exit" FontSize="16" Command="{Binding ExitCommand}" />
+    </VerticalStackLayout>
+</ContentPage>
