@@ -1,4 +1,8 @@
 ﻿using Microsoft.Extensions.Logging;
+using PaperRockScissors_MauiGame.Views;
+using PaperRockScissors_MauiGame.ViewModels;
+using PaperRockScissors_MauiGame.Services;
+using PaperRockScissors_MauiGame.Services.Interfaces;
 
 namespace PaperRockScissors_MauiGame
 {
@@ -15,8 +19,14 @@ namespace PaperRockScissors_MauiGame
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddTransient<GameView>();
+            builder.Services.AddTransient<GameViewModel>();
+            builder.Services.AddTransient<ResultView>();
+            builder.Services.AddTransient<ResultViewModel>();
+            builder.Services.AddTransient<IGameManager, GameManager>();
+
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
