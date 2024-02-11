@@ -8,6 +8,8 @@ namespace PaperRockScissors_MauiGame.ViewModels
     public partial class GameViewModel : ObservableObject
     {
         private readonly IGameManager gameManager;
+        private IGameChoice playerChoice;
+        private IGameChoice oponentChoice;
 
         public GameViewModel(IGameManager gameManager)
         {
@@ -17,15 +19,15 @@ namespace PaperRockScissors_MauiGame.ViewModels
         [RelayCommand]
         public async Task Choose(string choice)
         {
-            IGameChoice playerChoice = gameManager.SetChoice(choice);
-            IGameChoice oponentChoice = gameManager.RandChoice();
+            playerChoice = gameManager.SetChoice(choice);
+            oponentChoice = gameManager.RandChoice();
 
             string score = gameManager.CheckWhoWin(playerChoice, oponentChoice);
 
             await ResultRedirect(score);
         }
 
-        private async Task ResultRedirect(string score) => await Shell.Current.GoToAsync($"{nameof(ResultView)}?score={score}");
+        private async Task ResultRedirect(string score) => await Shell.Current.GoToAsync($"{nameof(ResultView)}?score={score}&playerChoice={playerChoice.Name.ToLower()}.png&oponentChoice={oponentChoice.Name.ToLower()}.png");
 
         [RelayCommand]
         public async Task Cancel() => await Shell.Current.Navigation.PopModalAsync();
