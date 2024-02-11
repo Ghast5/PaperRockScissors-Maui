@@ -7,8 +7,15 @@
 
     <VerticalStackLayout Margin="20">
         <Label Text="Your score" FontSize="25" HorizontalTextAlignment="Center" />
-        <Label Text="{Binding Score}" />
-        <Button Text="Play again" FontSize="16" Command="{Binding PlayAgainCommand}" />
-        <Button Text="Exit" FontSize="16" Command="{Binding ExitCommand}" />
+        <Label Text="{Binding Score}" HorizontalTextAlignment="Center" FontSize="20" Margin="0, 22, 0, 0" />
+
+        <Grid ColumnDefinitions="100, auto, 100" ColumnSpacing="15" HorizontalOptions="Center" Margin="0, 50">
+            <Image Grid.Column="0" Source="{Binding PlayerChoice}" />
+            <Label Grid.Column="1" Text="VS" FontSize="30" VerticalTextAlignment="Center" />
+            <Image Grid.Column="2" Source="{Binding OponentChoice}" />
+        </Grid>
+        
+        <Button Text="Play again" FontSize="16" Command="{Binding PlayAgainCommand}" Margin="0, 60, 0, 0" />
+        <Button Text="Exit" FontSize="16" Command="{Binding ExitCommand}" Margin="0, 5" />
     </VerticalStackLayout>
 </ContentPage>
