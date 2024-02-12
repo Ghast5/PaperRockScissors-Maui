@@ -43,6 +43,6 @@ namespace PaperRockScissors_MauiGame.ViewModels
         private async Task ResultRedirect(string score) => await Shell.Current.GoToAsync($"{nameof(ResultView)}?score={score}&playerChoice={playerChoice.Name.ToLower()}.png&oponentChoice={oponentChoice.Name.ToLower()}.png&color={resultColor}");
 
         [RelayCommand]
-        public async Task Cancel() => await Shell.Current.Navigation.PopModalAsync();
+        public async Task Cancel() => await Shell.Current.GoToAsync("MainView");
     }
 }
