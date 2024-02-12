@@ -8,12 +8,12 @@
 
     <VerticalStackLayout Margin="20">
         <Label Text="Paper, rock and scissors" FontSize="25" HorizontalTextAlignment="Center" />
-        <Label Text="What do you choose" FontSize="20" HorizontalTextAlignment="Center" Margin="0, 12, 0, 10" />
+        <Label Text="What do you choose" FontSize="20" HorizontalTextAlignment="Center" Margin="0, 22, 0, 25" />
         
-        <ImageButton Source="paper.png" Command="{Binding ChooseCommand}" CommandParameter="Paper" HeightRequest="100" Margin="0, 0, 0, 5" />
-        <ImageButton Source="rock.png" Command="{Binding ChooseCommand}" CommandParameter="Rock" HeightRequest="100" Margin="0, 0, 0, 5" />
+        <ImageButton Source="paper.png" Command="{Binding ChooseCommand}" CommandParameter="Paper" HeightRequest="100" Margin="0, 0, 0, 10" />
+        <ImageButton Source="rock.png" Command="{Binding ChooseCommand}" CommandParameter="Rock" HeightRequest="100" Margin="0, 0, 0, 10" />
         <ImageButton Source="scissors.png" Command="{Binding ChooseCommand}" CommandParameter="Scissors" HeightRequest="100" />
         
-        <Button Text="Cancel" FontSize="16" Command="{Binding CancelCommand}" Margin="0, 5, 0, 0" />
+        <Button Text="Cancel" FontSize="16" Command="{Binding CancelCommand}" Margin="0, 20, 0, 0" />
     </VerticalStackLayout>
 </ContentPage>

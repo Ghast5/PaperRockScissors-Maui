@@ -6,9 +6,9 @@
              x:DataType="viewModel:MainViewModel"
              Shell.NavBarIsVisible="False">
 
-    <VerticalStackLayout VerticalOptions="FillAndExpand" Margin="20">
+    <VerticalStackLayout Margin="20">
         <Label Text="Paper, rock and scissors" FontSize="25" HorizontalTextAlignment="Center" />
-        <Button Text="Play" Command="{Binding PlayRedirectCommand}" FontSize="18" Margin="0, 170, 0, 0" HeightRequest="50" />
+        <Button Text="Play" Command="{Binding PlayRedirectCommand}" FontSize="18" Margin="0, 190, 0, 0" VerticalOptions="Center" HeightRequest="50" />
     </VerticalStackLayout>
     
 </ContentPage>
