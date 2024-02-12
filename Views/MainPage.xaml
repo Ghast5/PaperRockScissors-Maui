@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PaperRockScissors_MauiGame.Views.MainPage"
              xmlns:viewModel="clr-namespace:PaperRockScissors_MauiGame.ViewModels"
-             x:DataType="viewModel:MainViewModel">
+             x:DataType="viewModel:MainViewModel"
+             Shell.NavBarIsVisible="False">
 
     <VerticalStackLayout VerticalOptions="FillAndExpand" Margin="20">
         <Label Text="Paper, rock and scissors" FontSize="25" HorizontalTextAlignment="Center" />

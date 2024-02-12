@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PaperRockScissors_MauiGame.Views.ResultView"
              xmlns:viewModel="clr-namespace:PaperRockScissors_MauiGame.ViewModels"
-             x:DataType="viewModel:ResultViewModel">
+             x:DataType="viewModel:ResultViewModel"
+             Shell.NavBarIsVisible="False">
 
     <VerticalStackLayout Margin="20">
         <Label Text="Your score" FontSize="25" HorizontalTextAlignment="Center" />
