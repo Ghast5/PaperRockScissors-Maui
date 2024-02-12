@@ -9,8 +9,8 @@ namespace PaperRockScissors_MauiGame.ViewModels
     {
         private readonly IGameManager gameManager;
         private IGameChoice playerChoice;
-        private IGameChoice oponentChoice;
-        private string resultColor;
+        private IGameChoice opponentChoice;
+        private string scoreColor;
 
         public GameViewModel(IGameManager gameManager)
         {
@@ -21,17 +21,17 @@ namespace PaperRockScissors_MauiGame.ViewModels
         public async Task Choose(string choice)
         {
             playerChoice = gameManager.SetChoice(choice);
-            oponentChoice = gameManager.RandChoice();
+            opponentChoice = gameManager.RandChoice();
 
-            string score = gameManager.CheckWhoWin(playerChoice, oponentChoice);
-            resultColor = SetColor(score);
+            string score = gameManager.CheckWhoWin(playerChoice, opponentChoice);
+            scoreColor = SetColor(score);
 
             await ResultRedirect(score);
         }
 
-        private string SetColor(string result)
+        private string SetColor(string score)
         {
-            return result switch
+            return score switch
             {
                 "Win" => "Green",
                 "Draw" => "Orange",
@@ -40,7 +40,7 @@ namespace PaperRockScissors_MauiGame.ViewModels
             };
         }
 
-        private async Task ResultRedirect(string score) => await Shell.Current.GoToAsync($"{nameof(ResultView)}?score={score}&playerChoice={playerChoice.Name.ToLower()}.png&oponentChoice={oponentChoice.Name.ToLower()}.png&color={resultColor}");
+        private async Task ResultRedirect(string score) => await Shell.Current.GoToAsync($"{nameof(ResultView)}?score={score}&playerChoice={playerChoice.Name.ToLower()}.png&opponentChoice={opponentChoice.Name.ToLower()}.png&color={scoreColor}");
 
         [RelayCommand]
         public async Task Cancel() => await Shell.Current.GoToAsync("MainView");

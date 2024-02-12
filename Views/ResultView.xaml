@@ -16,7 +16,7 @@
 
             <Image Grid.Column="0" Grid.Row="1" Source="{Binding PlayerChoice}" />
             <Label Grid.Column="1" Grid.Row="1" Text="VS" FontSize="30" VerticalTextAlignment="Center" />
-            <Image Grid.Column="2" Grid.Row="1" Source="{Binding OponentChoice}" />
+            <Image Grid.Column="2" Grid.Row="1" Source="{Binding OpponentChoice}" />
         </Grid>
         
         <Button Text="Play again" FontSize="16" Command="{Binding PlayAgainCommand}" Margin="0, 60, 0, 0" />
