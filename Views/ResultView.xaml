@@ -7,7 +7,7 @@
 
     <VerticalStackLayout Margin="20">
         <Label Text="Your score" FontSize="25" HorizontalTextAlignment="Center" />
-        <Label Text="{Binding Score}" HorizontalTextAlignment="Center" FontSize="20" Margin="0, 22, 0, 0" />
+        <Label Text="{Binding Score}" TextColor="{Binding ResultColor}" HorizontalTextAlignment="Center" FontSize="20" Margin="0, 22, 0, 0" />
 
         <Grid ColumnDefinitions="100, auto, 100" ColumnSpacing="15" HorizontalOptions="Center" Margin="0, 50">
             <Image Grid.Column="0" Source="{Binding PlayerChoice}" />
