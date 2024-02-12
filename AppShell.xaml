@@ -10,7 +10,7 @@
         <Tab Title="Game" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fonts:FontAwesomeSolid.Gamepad}}">
             <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
         </Tab>
-        <Tab Title="Rules">
+        <Tab Title="Rules" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fonts:FontAwesomeSolid.Scroll}}">
             <ShellContent ContentTemplate="{DataTemplate views:RulesView}" />
         </Tab>
     </TabBar>
