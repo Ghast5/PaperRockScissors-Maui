@@ -7,6 +7,7 @@ namespace PaperRockScissors_MauiGame.ViewModels
     [QueryProperty(nameof(Score), "score")]
     [QueryProperty(nameof(PlayerChoice), "playerChoice")]
     [QueryProperty(nameof(OponentChoice), "oponentChoice")]
+    [QueryProperty(nameof(ResultColor), "color")]
     public partial class ResultViewModel : ObservableObject
     {
 
@@ -18,6 +19,9 @@ namespace PaperRockScissors_MauiGame.ViewModels
 
         [ObservableProperty]
         private string oponentChoice;
+
+        [ObservableProperty]
+        private string resultColor;
 
         [RelayCommand]
         public async Task PlayAgain() => await Shell.Current.GoToAsync(nameof(GameView));
