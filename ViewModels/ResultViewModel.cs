@@ -6,7 +6,7 @@ namespace PaperRockScissors_MauiGame.ViewModels
 {
     [QueryProperty(nameof(Score), "score")]
     [QueryProperty(nameof(PlayerChoice), "playerChoice")]
-    [QueryProperty(nameof(OponentChoice), "oponentChoice")]
+    [QueryProperty(nameof(OpponentChoice), "opponentChoice")]
     [QueryProperty(nameof(ResultColor), "color")]
     public partial class ResultViewModel : ObservableObject
     {
@@ -18,7 +18,7 @@ namespace PaperRockScissors_MauiGame.ViewModels
         private string playerChoice;
 
         [ObservableProperty]
-        private string oponentChoice;
+        private string opponentChoice;
 
         [ObservableProperty]
         private string resultColor;
