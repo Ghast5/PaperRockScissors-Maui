@@ -3,10 +3,11 @@
     x:Class="PaperRockScissors_MauiGame.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:views="clr-namespace:PaperRockScissors_MauiGame.Views">
+    xmlns:views="clr-namespace:PaperRockScissors_MauiGame.Views"
+    xmlns:fonts="clr-namespace:PaperRockScissors_MauiGame.Resources.Styles">
 
     <TabBar>
-        <Tab Title="Game">
+        <Tab Title="Game" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fonts:FontAwesomeSolid.Gamepad}}">
             <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
         </Tab>
         <Tab Title="Rules">

@@ -56,9 +56,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Resources\Fonts\FontAwesomeSolid.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Fonts\fa-solid-900.ttf" />
 	  <None Remove="Resources\Images\Paper.png" />
 	  <None Remove="Resources\Images\Rock.png" />
 	  <None Remove="Resources\Images\Scissors.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiFont Include="Resources\Styles\FontAwesomeSolid.cs" />
 	</ItemGroup>
 
 	<ItemGroup>

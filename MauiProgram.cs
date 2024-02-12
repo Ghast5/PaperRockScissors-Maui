@@ -15,6 +15,7 @@ namespace PaperRockScissors_MauiGame
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
                 {
+                    fonts.AddFont("fa-solid-900.ttf", "FontAwesomeSolid");
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
