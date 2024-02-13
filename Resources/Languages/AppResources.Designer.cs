@@ -106,6 +106,24 @@ namespace PaperRockScissors_MauiGame.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        internal static string Language {
+            get {
+                return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to choose language.
+        /// </summary>
+        internal static string LanguageChoose {
+            get {
+                return ResourceManager.GetString("LanguageChoose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Loose.
         /// </summary>
         internal static string Loose {
@@ -192,6 +210,24 @@ namespace PaperRockScissors_MauiGame.Resources.Languages {
         internal static string RulesTitle {
             get {
                 return ResourceManager.GetString("RulesTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        internal static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        internal static string Settings {
+            get {
+                return ResourceManager.GetString("Settings", resourceCulture);
             }
         }
         

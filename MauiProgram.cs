@@ -25,6 +25,9 @@ namespace PaperRockScissors_MauiGame
             builder.Services.AddTransient<ResultView>();
             builder.Services.AddTransient<ResultViewModel>();
             builder.Services.AddTransient<IGameManager, GameManager>();
+            builder.Services.AddTransient<SettingsView>();
+            builder.Services.AddTransient<SettingsViewModel>();
+            builder.Services.AddTransient<ICultureInfoManager, CultureInfoManager>();
 
 #if DEBUG
             builder.Logging.AddDebug();

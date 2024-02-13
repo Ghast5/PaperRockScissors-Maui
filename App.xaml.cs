@@ -1,4 +1,6 @@
 ﻿
+using PaperRockScissors_MauiGame.Services;
+using PaperRockScissors_MauiGame.Services.Interfaces;
 using System.Globalization;
 
 namespace PaperRockScissors_MauiGame
@@ -9,7 +11,9 @@ namespace PaperRockScissors_MauiGame
         {
             InitializeComponent();
 
-            CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(CultureInfo.CurrentUICulture.Name);
+            CultureInfoManager cultureManager = new();
+            string culture = cultureManager.GetCultureInfo();
+            CultureInfo.CurrentUICulture = CultureInfo.CreateSpecificCulture(culture);
             MainPage = new AppShell();
         }
     }
