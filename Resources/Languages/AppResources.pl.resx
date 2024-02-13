@@ -132,6 +132,12 @@
   <data name="GameViewSubTitle" xml:space="preserve">
     <value>Co wybierasz</value>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>Język</value>
+  </data>
+  <data name="LanguageChoose" xml:space="preserve">
+    <value>wybierz język</value>
+  </data>
   <data name="Loose" xml:space="preserve">
     <value>Przegrałeś</value>
   </data>
@@ -161,6 +167,12 @@
   </data>
   <data name="RulesTitle" xml:space="preserve">
     <value>Zasady</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Zapisz</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Ustawienia</value>
   </data>
   <data name="Win" xml:space="preserve">
     <value>Wygrałeś</value>
