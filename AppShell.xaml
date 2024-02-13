@@ -4,13 +4,14 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:PaperRockScissors_MauiGame.Views"
-    xmlns:fonts="clr-namespace:PaperRockScissors_MauiGame.Resources.Styles">
+    xmlns:fonts="clr-namespace:PaperRockScissors_MauiGame.Resources.Styles"
+    xmlns:res="clr-namespace:PaperRockScissors_MauiGame.Resources.Languages">
 
     <TabBar>
-        <Tab Title="Game" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fonts:FontAwesomeSolid.Gamepad}}">
+        <Tab Title="{x:Static res:AppResources.Game}" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fonts:FontAwesomeSolid.Gamepad}}">
             <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
         </Tab>
-        <Tab Title="Rules" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fonts:FontAwesomeSolid.Scroll}}">
+        <Tab Title="{x:Static res:AppResources.RulesTitle}" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fonts:FontAwesomeSolid.Scroll}}">
             <ShellContent ContentTemplate="{DataTemplate views:RulesView}" />
         </Tab>
     </TabBar>
