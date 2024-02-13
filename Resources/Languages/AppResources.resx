@@ -126,6 +126,9 @@
   <data name="Exit" xml:space="preserve">
     <value>Exit</value>
   </data>
+  <data name="Game" xml:space="preserve">
+    <value>Game</value>
+  </data>
   <data name="GameViewSubTitle" xml:space="preserve">
     <value>What do you choose</value>
   </data>

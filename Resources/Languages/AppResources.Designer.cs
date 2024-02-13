@@ -88,6 +88,15 @@ namespace PaperRockScissors_MauiGame.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Game.
+        /// </summary>
+        internal static string Game {
+            get {
+                return ResourceManager.GetString("Game", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to What do you choose.
         /// </summary>
         internal static string GameViewSubTitle {
