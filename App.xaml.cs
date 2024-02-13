@@ -1,4 +1,7 @@
-﻿namespace PaperRockScissors_MauiGame
+﻿
+using System.Globalization;
+
+namespace PaperRockScissors_MauiGame
 {
     public partial class App : Application
     {
@@ -6,6 +9,7 @@
         {
             InitializeComponent();
 
+            CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(CultureInfo.CurrentUICulture.Name);
             MainPage = new AppShell();
         }
     }
