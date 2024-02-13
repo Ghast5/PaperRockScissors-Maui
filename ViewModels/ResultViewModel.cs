@@ -1,6 +1,9 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using PaperRockScissors_MauiGame.Views;
+using System.Globalization;
+using System.Reflection;
+using System.Resources;
 
 namespace PaperRockScissors_MauiGame.ViewModels
 {
@@ -10,9 +13,10 @@ namespace PaperRockScissors_MauiGame.ViewModels
     [QueryProperty(nameof(ResultColor), "color")]
     public partial class ResultViewModel : ObservableObject
     {
+        static ResourceManager rm = new ResourceManager($"AppResources", Assembly.GetExecutingAssembly());
 
         [ObservableProperty]
-        private string score;
+        private string score = rm.GetString("Win", CultureInfo.CreateSpecificCulture("pl"));
 
         [ObservableProperty]
         private string playerChoice;
