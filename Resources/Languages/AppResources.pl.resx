@@ -129,6 +129,9 @@
   <data name="Game" xml:space="preserve">
     <value>Gra</value>
   </data>
+  <data name="GameColumn" xml:space="preserve">
+    <value>Gra</value>
+  </data>
   <data name="GameViewSubTitle" xml:space="preserve">
     <value>Co wybierasz</value>
   </data>
@@ -150,8 +153,14 @@
   <data name="Opponent" xml:space="preserve">
     <value>Przeciwnik</value>
   </data>
+  <data name="OpponentChoiceColumn" xml:space="preserve">
+    <value>Przeciwnik</value>
+  </data>
   <data name="PlayAgainButton" xml:space="preserve">
     <value>Zagraj jeszcze raz</value>
+  </data>
+  <data name="PlayerChoiceColumn" xml:space="preserve">
+    <value>Gracz</value>
   </data>
   <data name="ResultTitle" xml:space="preserve">
     <value>Twój wynik</value>
@@ -170,6 +179,15 @@
   </data>
   <data name="Save" xml:space="preserve">
     <value>Zapisz</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Wynik</value>
+  </data>
+  <data name="Scoreboard" xml:space="preserve">
+    <value>Wyniki</value>
+  </data>
+  <data name="ScoreboardTitle" xml:space="preserve">
+    <value>Tabela wyników</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Ustawienia</value>
