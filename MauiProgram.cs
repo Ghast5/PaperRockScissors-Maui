@@ -3,6 +3,9 @@ using PaperRockScissors_MauiGame.Views;
 using PaperRockScissors_MauiGame.ViewModels;
 using PaperRockScissors_MauiGame.Services;
 using PaperRockScissors_MauiGame.Services.Interfaces;
+using PaperRockScissors_MauiGame.Services.Data;
+using Microsoft.Maui.Controls.Compatibility.Hosting;
+using CommunityToolkit.Maui;
 
 namespace PaperRockScissors_MauiGame
 {
@@ -13,6 +16,7 @@ namespace PaperRockScissors_MauiGame
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("fa-solid-900.ttf", "FontAwesomeSolid");
@@ -28,6 +32,10 @@ namespace PaperRockScissors_MauiGame
             builder.Services.AddTransient<SettingsView>();
             builder.Services.AddTransient<SettingsViewModel>();
             builder.Services.AddTransient<ICultureInfoManager, CultureInfoManager>();
+
+            builder.Services.AddTransient<ScoreboardView>();
+            builder.Services.AddTransient<ScoreboardViewModel>();
+            builder.Services.AddSingleton<ScoreStorage>();
 
 #if DEBUG
             builder.Logging.AddDebug();
