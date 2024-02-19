@@ -2,19 +2,23 @@
 using CommunityToolkit.Mvvm.Input;
 using PaperRockScissors_MauiGame.Views;
 using PaperRockScissors_MauiGame.Services.Interfaces;
+using PaperRockScissors_MauiGame.Services.Data;
 
 namespace PaperRockScissors_MauiGame.ViewModels
 {
     public partial class GameViewModel : ObservableObject
     {
         private readonly IGameManager gameManager;
+        private readonly ScoreStorage scoreStorage;
+
         private IGameChoice playerChoice;
         private IGameChoice opponentChoice;
         private string scoreColor;
 
-        public GameViewModel(IGameManager gameManager)
+        public GameViewModel(IGameManager gameManager, ScoreStorage scoreStorage)
         {
             this.gameManager = gameManager;
+            this.scoreStorage = scoreStorage;
         }
 
         [RelayCommand]
@@ -25,6 +29,14 @@ namespace PaperRockScissors_MauiGame.ViewModels
 
             string score = gameManager.CheckWhoWin(playerChoice, opponentChoice);
             scoreColor = SetColor(score);
+
+            scoreStorage.AddScore(new Models.ScoreEntry
+            {
+                Id = scoreStorage.GetScoreList().Count,
+                PlayerChoice = playerChoice.Name,
+                OpponentChoice = opponentChoice.Name,
+                Score = score
+            });
 
             await ResultRedirect(score);
         }

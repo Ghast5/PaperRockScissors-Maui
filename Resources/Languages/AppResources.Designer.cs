@@ -97,6 +97,15 @@ namespace PaperRockScissors_MauiGame.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Game.
+        /// </summary>
+        internal static string GameColumn {
+            get {
+                return ResourceManager.GetString("GameColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to What do you choose.
         /// </summary>
         internal static string GameViewSubTitle {
@@ -160,11 +169,29 @@ namespace PaperRockScissors_MauiGame.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Opponent.
+        /// </summary>
+        internal static string OpponentChoiceColumn {
+            get {
+                return ResourceManager.GetString("OpponentChoiceColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Play again.
         /// </summary>
         internal static string PlayAgainButton {
             get {
                 return ResourceManager.GetString("PlayAgainButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Player.
+        /// </summary>
+        internal static string PlayerChoiceColumn {
+            get {
+                return ResourceManager.GetString("PlayerChoiceColumn", resourceCulture);
             }
         }
         
@@ -219,6 +246,33 @@ namespace PaperRockScissors_MauiGame.Resources.Languages {
         internal static string Save {
             get {
                 return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Score.
+        /// </summary>
+        internal static string Score {
+            get {
+                return ResourceManager.GetString("Score", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scoreboard.
+        /// </summary>
+        internal static string Scoreboard {
+            get {
+                return ResourceManager.GetString("Scoreboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scoreboard.
+        /// </summary>
+        internal static string ScoreboardTitle {
+            get {
+                return ResourceManager.GetString("ScoreboardTitle", resourceCulture);
             }
         }
         
