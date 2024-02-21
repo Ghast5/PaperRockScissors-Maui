@@ -5,9 +5,9 @@ namespace PaperRockScissors_MauiGame.Views;
 
 public partial class ScoreboardView : ContentPage
 {
-	public ScoreboardView(ScoreStorage storage)
+	public ScoreboardView(ScoreboardViewModel viewModel)
 	{
-		BindingContext = new ScoreboardViewModel(storage);
+		BindingContext = viewModel;
 		InitializeComponent();
 	}
 }
