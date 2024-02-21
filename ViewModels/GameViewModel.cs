@@ -32,7 +32,7 @@ namespace PaperRockScissors_MauiGame.ViewModels
 
             scoreStorage.AddScore(new Models.ScoreEntry
             {
-                Id = scoreStorage.GetScoreList().Count,
+                Id = scoreStorage.GetScoreList().Count + 1,
                 PlayerChoice = playerChoice.Name,
                 OpponentChoice = opponentChoice.Name,
                 Score = score
