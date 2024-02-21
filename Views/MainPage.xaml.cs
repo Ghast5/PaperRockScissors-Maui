@@ -4,9 +4,9 @@ namespace PaperRockScissors_MauiGame.Views
 {
     public partial class MainPage : ContentPage
     {
-        public MainPage()
+        public MainPage(MainViewModel viewModel)
         {
-            BindingContext = new MainViewModel();
+            BindingContext = viewModel;
             InitializeComponent();
         }
     }
