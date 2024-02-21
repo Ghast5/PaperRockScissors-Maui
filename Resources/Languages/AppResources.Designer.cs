@@ -178,6 +178,15 @@ namespace PaperRockScissors_MauiGame.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Paper.
+        /// </summary>
+        internal static string Paper {
+            get {
+                return ResourceManager.GetString("Paper", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Play again.
         /// </summary>
         internal static string PlayAgainButton {
@@ -201,6 +210,15 @@ namespace PaperRockScissors_MauiGame.Resources.Languages {
         internal static string ResultTitle {
             get {
                 return ResourceManager.GetString("ResultTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rock.
+        /// </summary>
+        internal static string Rock {
+            get {
+                return ResourceManager.GetString("Rock", resourceCulture);
             }
         }
         
@@ -246,6 +264,15 @@ namespace PaperRockScissors_MauiGame.Resources.Languages {
         internal static string Save {
             get {
                 return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Scissors.
+        /// </summary>
+        internal static string Scissors {
+            get {
+                return ResourceManager.GetString("Scissors", resourceCulture);
             }
         }
         

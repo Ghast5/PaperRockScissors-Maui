@@ -4,23 +4,23 @@
              x:Class="PaperRockScissors_MauiGame.Views.ResultView"
              xmlns:viewModel="clr-namespace:PaperRockScissors_MauiGame.ViewModels"
              x:DataType="viewModel:ResultViewModel"
-             Shell.NavBarIsVisible="False"
-             xmlns:res="clr-namespace:PaperRockScissors_MauiGame.Resources.Languages">
+             xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+             Shell.NavBarIsVisible="False">
 
     <VerticalStackLayout Margin="20">
-        <Label Text="{x:Static res:AppResources.ResultTitle}" FontSize="25" HorizontalTextAlignment="Center" />
-        <Label Text="{Binding Score}" TextColor="{Binding ResultColor}" HorizontalTextAlignment="Center" FontSize="20" Margin="0, 22, 0, 0" />
+        <Label Text="{localization:Translate ResultTitle}" FontSize="25" HorizontalTextAlignment="Center" />
+        <Label Text="{localization:TranslateBinding Score, TranslateValue=True}" TextColor="{Binding ResultColor}" HorizontalTextAlignment="Center" FontSize="20" Margin="0, 22, 0, 0" />
 
         <Grid ColumnDefinitions="100, auto, 100" RowDefinitions="Auto, Auto" ColumnSpacing="15" RowSpacing="10" HorizontalOptions="Center" Margin="0, 60">
-            <Label Grid.Column="0" Grid.Row="0" Text="{x:Static res:AppResources.You}" FontSize="18" HorizontalTextAlignment="Center" />
-            <Label Grid.Column="2" Grid.Row="0" Text="{x:Static res:AppResources.Opponent}" FontSize="18" HorizontalTextAlignment="Center" />
+            <Label Grid.Column="0" Grid.Row="0" Text="{localization:Translate You}" FontSize="18" HorizontalTextAlignment="Center" />
+            <Label Grid.Column="2" Grid.Row="0" Text="{localization:Translate Opponent}" FontSize="18" HorizontalTextAlignment="Center" />
 
             <Image Grid.Column="0" Grid.Row="1" Source="{Binding PlayerChoice}" />
             <Label Grid.Column="1" Grid.Row="1" Text="VS" FontSize="30" VerticalTextAlignment="Center" />
             <Image Grid.Column="2" Grid.Row="1" Source="{Binding OpponentChoice}" />
         </Grid>
 
-        <Button Text="{x:Static res:AppResources.PlayAgainButton}" FontSize="16" Command="{Binding PlayAgainCommand}" Margin="0, 60, 0, 0" />
-        <Button Text="{x:Static res:AppResources.Exit}" FontSize="16" Command="{Binding ExitCommand}" Margin="0, 5" />
+        <Button Text="{localization:Translate PlayAgainButton}" FontSize="16" Command="{Binding PlayAgainCommand}" Margin="0, 60, 0, 0" />
+        <Button Text="{localization:Translate Exit}" FontSize="16" Command="{Binding ExitCommand}" Margin="0, 5" />
     </VerticalStackLayout>
 </ContentPage>

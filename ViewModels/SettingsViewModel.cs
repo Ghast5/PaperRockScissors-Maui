@@ -9,14 +9,17 @@ namespace PaperRockScissors_MauiGame.ViewModels
     {
         [ObservableProperty]
         private int languageIndex;
-
         private readonly ICultureInfoManager cultureInfoManager;
 
         public SettingsViewModel(ICultureInfoManager cultureInfoManager)
         {
             this.cultureInfoManager = cultureInfoManager;
-            _ = Enum.TryParse(cultureInfoManager.GetCultureInfo()[..2], out Languages languageIso);
-            LanguageIndex = (int)languageIso;
+
+            if (Enum.TryParse(cultureInfoManager.GetCultureInfo()[..2], out Languages languageIso))
+                LanguageIndex = (int)languageIso;
+            else
+                LanguageIndex = (int)Languages.en;
+                
         }
 
         [RelayCommand]

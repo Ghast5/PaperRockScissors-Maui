@@ -11,9 +11,6 @@ namespace PaperRockScissors_MauiGame
         {
             InitializeComponent();
 
-            CultureInfoManager cultureManager = new();
-            string culture = cultureManager.GetCultureInfo();
-            CultureInfo.CurrentUICulture = CultureInfo.CreateSpecificCulture(culture);
             MainPage = new AppShell();
         }
     }

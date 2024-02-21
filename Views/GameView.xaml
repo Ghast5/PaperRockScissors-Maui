@@ -5,16 +5,16 @@
              xmlns:viewModel="clr-namespace:PaperRockScissors_MauiGame.ViewModels"
              x:DataType="viewModel:GameViewModel"
              Shell.NavBarIsVisible="False"
-             xmlns:res="clr-namespace:PaperRockScissors_MauiGame.Resources.Languages">
+             xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui">
 
     <VerticalStackLayout Margin="20">
-        <Label Text="{x:Static res:AppResources.MainTitle}" FontSize="25" HorizontalTextAlignment="Center" />
-        <Label Text="{x:Static res:AppResources.GameViewSubTitle}" FontSize="20" HorizontalTextAlignment="Center" Margin="0, 22, 0, 25" />
+        <Label Text="{localization:Translate MainTitle}" FontSize="25" HorizontalTextAlignment="Center" />
+        <Label Text="{localization:Translate GameViewSubTitle}" FontSize="20" HorizontalTextAlignment="Center" Margin="0, 22, 0, 25" />
         
         <ImageButton Source="paper.png" Command="{Binding ChooseCommand}" CommandParameter="Paper" HeightRequest="100" Margin="0, 0, 0, 10" />
         <ImageButton Source="rock.png" Command="{Binding ChooseCommand}" CommandParameter="Rock" HeightRequest="100" Margin="0, 0, 0, 10" />
         <ImageButton Source="scissors.png" Command="{Binding ChooseCommand}" CommandParameter="Scissors" HeightRequest="100" />
         
-        <Button Text="{x:Static res:AppResources.Cancel}" FontSize="16" Command="{Binding CancelCommand}" Margin="0, 20, 0, 0" />
+        <Button Text="{localization:Translate Cancel}" FontSize="16" Command="{Binding CancelCommand}" Margin="0, 20, 0, 0" />
     </VerticalStackLayout>
 </ContentPage>

@@ -4,8 +4,9 @@ using PaperRockScissors_MauiGame.ViewModels;
 using PaperRockScissors_MauiGame.Services;
 using PaperRockScissors_MauiGame.Services.Interfaces;
 using PaperRockScissors_MauiGame.Services.Data;
-using Microsoft.Maui.Controls.Compatibility.Hosting;
 using CommunityToolkit.Maui;
+using LocalizationResourceManager.Maui;
+using PaperRockScissors_MauiGame.Resources.Languages;
 
 namespace PaperRockScissors_MauiGame
 {
@@ -17,6 +18,11 @@ namespace PaperRockScissors_MauiGame
             builder
                 .UseMauiApp<App>()
                 .UseMauiCommunityToolkit()
+                .UseLocalizationResourceManager(settings =>
+                {
+                    settings.RestoreLatestCulture(true);
+                    settings.AddResource(AppResources.ResourceManager);
+                })
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("fa-solid-900.ttf", "FontAwesomeSolid");

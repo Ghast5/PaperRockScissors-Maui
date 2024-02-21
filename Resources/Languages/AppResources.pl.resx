@@ -156,6 +156,9 @@
   <data name="OpponentChoiceColumn" xml:space="preserve">
     <value>Przeciwnik</value>
   </data>
+  <data name="Paper" xml:space="preserve">
+    <value>Papier</value>
+  </data>
   <data name="PlayAgainButton" xml:space="preserve">
     <value>Zagraj jeszcze raz</value>
   </data>
@@ -164,6 +167,9 @@
   </data>
   <data name="ResultTitle" xml:space="preserve">
     <value>Twój wynik</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Kamień</value>
   </data>
   <data name="RulesColumnTitle1" xml:space="preserve">
     <value>Wybór</value>
@@ -179,6 +185,9 @@
   </data>
   <data name="Save" xml:space="preserve">
     <value>Zapisz</value>
+  </data>
+  <data name="Scissors" xml:space="preserve">
+    <value>Nożyczki</value>
   </data>
   <data name="Score" xml:space="preserve">
     <value>Wynik</value>

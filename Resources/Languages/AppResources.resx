@@ -157,6 +157,9 @@
   <data name="OpponentChoiceColumn" xml:space="preserve">
     <value>Opponent</value>
   </data>
+  <data name="Paper" xml:space="preserve">
+    <value>Paper</value>
+  </data>
   <data name="PlayAgainButton" xml:space="preserve">
     <value>Play again</value>
   </data>
@@ -165,6 +168,9 @@
   </data>
   <data name="ResultTitle" xml:space="preserve">
     <value>Your score</value>
+  </data>
+  <data name="Rock" xml:space="preserve">
+    <value>Rock</value>
   </data>
   <data name="RulesColumnTitle1" xml:space="preserve">
     <value>Choice</value>
@@ -180,6 +186,9 @@
   </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>
+  </data>
+  <data name="Scissors" xml:space="preserve">
+    <value>Scissors</value>
   </data>
   <data name="Score" xml:space="preserve">
     <value>Score</value>
