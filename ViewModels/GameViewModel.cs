@@ -9,13 +9,13 @@ namespace PaperRockScissors_MauiGame.ViewModels
     public partial class GameViewModel : ObservableObject
     {
         private readonly IGameManager gameManager;
-        private readonly ScoreStorage scoreStorage;
+        private readonly IScoreStorage scoreStorage;
 
         private IGameChoice playerChoice;
         private IGameChoice opponentChoice;
         private string scoreColor;
 
-        public GameViewModel(IGameManager gameManager, ScoreStorage scoreStorage)
+        public GameViewModel(IGameManager gameManager, IScoreStorage scoreStorage)
         {
             this.gameManager = gameManager;
             this.scoreStorage = scoreStorage;
