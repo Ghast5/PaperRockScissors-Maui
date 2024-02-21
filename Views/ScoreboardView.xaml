@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PaperRockScissors_MauiGame.Views.ScoreboardView"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
-             xmlns:res="clr-namespace:PaperRockScissors_MauiGame.Resources.Languages"
+             xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
              xmlns:viewModel="clr-namespace:PaperRockScissors_MauiGame.ViewModels"
              x:DataType="viewModel:ScoreboardViewModel"
              xmlns:model="clr-namespace:PaperRockScissors_MauiGame.Models">
@@ -13,13 +13,13 @@
     </ContentPage.Behaviors>
 
     <VerticalStackLayout Margin="20">
-        <Label Text="{x:Static res:AppResources.ScoreboardTitle}" FontSize="25" HorizontalTextAlignment="Center" />
+        <Label Text="{localization:Translate ScoreboardTitle}" FontSize="25" HorizontalTextAlignment="Center" />
 
         <Grid ColumnDefinitions="40, 60, 95, 60" ColumnSpacing="20" HorizontalOptions="Center" Margin="0, 30, 0, 0">
-            <Label Grid.Column="0" Text="{x:Static res:AppResources.Game}" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" />
-            <Label Grid.Column="1" Text="{x:Static res:AppResources.PlayerChoiceColumn}" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" />
-            <Label Grid.Column="2" Text="{x:Static res:AppResources.OpponentChoiceColumn}" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" />
-            <Label Grid.Column="3" Text="{x:Static res:AppResources.Score}" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            <Label Grid.Column="0" Text="{localization:Translate Game}" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            <Label Grid.Column="1" Text="{localization:Translate PlayerChoiceColumn}" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            <Label Grid.Column="2" Text="{localization:Translate OpponentChoiceColumn}" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" />
+            <Label Grid.Column="3" Text="{localization:Translate Score}" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" />
         </Grid>
 
         <ListView ItemsSource="{Binding Entries}" Margin="0, 5, 0, 30">
@@ -28,9 +28,9 @@
                     <ViewCell>
                         <Grid ColumnDefinitions="40, 70, 95, 60" ColumnSpacing="20" HorizontalOptions="Center">
                             <Label Grid.Column="0" Text="{Binding Id}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-                            <Label Grid.Column="1" Text="{Binding PlayerChoice}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-                            <Label Grid.Column="2" Text="{Binding OpponentChoice}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
-                            <Label Grid.Column="3" Text="{Binding Score}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                            <Label Grid.Column="1" Text="{localization:TranslateBinding PlayerChoice, TranslateValue=True}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                            <Label Grid.Column="2" Text="{localization:TranslateBinding OpponentChoice, TranslateValue=True}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+                            <Label Grid.Column="3" Text="{localization:TranslateBinding Score, TranslateValue=True}" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
