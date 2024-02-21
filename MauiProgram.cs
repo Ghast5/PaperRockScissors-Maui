@@ -30,6 +30,8 @@ namespace PaperRockScissors_MauiGame
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
 
+            builder.Services.AddTransient<MainPage>();
+            builder.Services.AddTransient<MainViewModel>();
             builder.Services.AddTransient<GameView>();
             builder.Services.AddTransient<GameViewModel>();
             builder.Services.AddTransient<ResultView>();
@@ -41,7 +43,7 @@ namespace PaperRockScissors_MauiGame
 
             builder.Services.AddTransient<ScoreboardView>();
             builder.Services.AddTransient<ScoreboardViewModel>();
-            builder.Services.AddSingleton<ScoreStorage>();
+            builder.Services.AddSingleton<IScoreStorage, ScoreStorage>();
 
 #if DEBUG
             builder.Logging.AddDebug();
