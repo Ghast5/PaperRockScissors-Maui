@@ -5,19 +5,19 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:views="clr-namespace:PaperRockScissors_MauiGame.Views"
     xmlns:fonts="clr-namespace:PaperRockScissors_MauiGame.Resources.Styles"
-    xmlns:res="clr-namespace:PaperRockScissors_MauiGame.Resources.Languages">
+    xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui">
 
     <TabBar>
-        <Tab Title="{x:Static res:AppResources.RulesTitle}" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fonts:FontAwesomeSolid.Scroll}}">
+        <Tab Title="{localization:Translate RulesTitle}" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fonts:FontAwesomeSolid.Scroll}}">
             <ShellContent ContentTemplate="{DataTemplate views:RulesView}" />
         </Tab>
-        <Tab Title="{x:Static res:AppResources.Game}" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fonts:FontAwesomeSolid.Gamepad}}">
+        <Tab Title="{localization:Translate Game}" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fonts:FontAwesomeSolid.Gamepad}}">
             <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
         </Tab>
-        <Tab Title="{x:Static res:AppResources.Scoreboard}" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fonts:FontAwesomeSolid.RankingStar}}" >
+        <Tab Title="{localization:Translate Scoreboard}" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fonts:FontAwesomeSolid.RankingStar}}" >
             <ShellContent ContentTemplate="{DataTemplate views:ScoreboardView}" />
         </Tab>
-        <Tab Title="{x:Static res:AppResources.Settings}" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fonts:FontAwesomeSolid.Gears}}">
+        <Tab Title="{localization:Translate Settings}" Icon="{FontImage FontFamily=FontAwesomeSolid, Glyph={x:Static fonts:FontAwesomeSolid.Gears}}">
             <ShellContent ContentTemplate="{DataTemplate views:SettingsView}" />
         </Tab>
     </TabBar>
